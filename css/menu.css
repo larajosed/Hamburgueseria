@@ -1,0 +1,107 @@
+.today-menu {
+    background-color: var(--colorsecundario);
+   
+}
+
+.today-menu * {
+    color: white;
+    
+}
+
+.today-menu .menu-naranja {
+    color:  var(--colorprincipal); 
+}
+
+.navigation-sidebar{
+    margin: 0 auto;
+}
+
+.navigation-sidebar ul{
+    margin: 1em;
+}
+.navigation-sidebar ul li{
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+.navigation-sidebar ul li:hover{
+    background-color:  var(--colorprincipal);
+}
+
+.orange-line{
+    width: 3em;
+    border: 1px solid var(--colorprincipal);
+    display: inline-block;
+}
+
+.today-offers-text{
+    line-height: 150%;
+}
+
+.today-offers-header{
+    margin-top: 50px;
+}
+
+.offers-main-menu{
+    padding: 1.5em;
+    margin: 0 auto;
+    
+}
+
+.menu-item h3 .price-menu{
+    color: var(--colorprincipal);
+    margin-left: 15px;
+}
+
+.menu-item-text{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.menu-item-title{
+    margin-top: 2em;
+    font-size: 1em;
+}
+
+.order-link {
+    color: var(--colorprincipal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.order-link i{
+    color: var(--colorprincipal);
+}
+
+.menu-item:not(:first-child) {
+    margin-top: 2em;
+}
+
+@media(min-width: 48em){
+.navigation-sidebar, .offers-main-menu {
+    display: inline-block;
+}
+.navigation-sidebar{
+    width: 300px;
+}
+.menu-item img{
+    width: 200px;
+   
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+}
+.menu-item div{
+    display: inline-block;
+    margin-left: 1em;
+    
+}
+
+.menu-item-title{
+    margin-top: 0;
+}
+.menu-item:not(:first-child){
+margin-top: 2em;
+}
+
+}

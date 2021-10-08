@@ -1,0 +1,397 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+/*
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+html {
+    /* para generar animaciones de puntos de ancla*/
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentesecundaria: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --fontsize: 1em;
+    --margingrid: 1em;
+    --anchomaximo: 1100px;
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+/* inicio de header */
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 20px 0px;
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+}
+
+header .nav-top a i {
+    font-size: calc(var(--fontsize)*1.4);
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+header .nav-top .fa-phone {
+    transform: rotateZ(270deg);
+}
+
+header nav {
+    padding: 20px 10px;
+}
+
+header nav .logo {
+    float: left;
+    max-width: 100px;
+}
+
+header nav .hamburguesa {
+    float: right;
+    width: 2em;
+    cursor: pointer;
+}
+
+header nav .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+}
+
+header nav .menu {
+    clear: both;
+    padding-top: 0.625em;
+    text-align: center;
+}
+
+header nav .menu a {
+    display: block;
+    text-decoration: none;
+    padding: 1.25em;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu a:hover, header nav .menu .activo {
+    color: var(--colorprincipal);
+}
+
+header nav li:last-child a {
+    border-bottom: 0;
+}
+
+header nav:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+/* fin de header */
+
+/* inicio footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--colorsecundario);
+    color: white;
+    padding: 1em 0.625em;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--colorprincipal);
+}
+
+.arriba {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    font-size: 2em;
+}
+
+.arriba a {
+    color: var(--colorprincipal);
+}
+
+/* fin de footer */
+
+/* inicio del hero */
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    background-color: #999;
+    background-blend-mode: multiply;
+    height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+}
+
+.hero h1 {
+    font-family: var(--fuentesecundaria);
+    font-size: calc(var(--fontsize)*2.3);
+    color: white;
+}
+
+.hero h2 {
+    color: var(--colorprincipal);
+    font-size: 1.25em;
+    margin: var(--margingrid) 0;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.15em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    color: white;
+    text-decoration: none;
+    padding: 1.15em;
+    margin: var(--margingrid) 0;
+    border: 1px solid var(--colorprincipal);
+}
+
+.boton:hover {
+    color: var(--colorprincipal);
+    background-color: transparent;
+    border: 1px solid var(--colorprincipal);
+}
+
+.boton:hover i {
+    transition: 0.5s;
+    transform: translateX(5px);
+}
+
+.hero .social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/* fin de hero */
+
+/* inicio ourservices */
+
+main section {
+    padding: 2.5em 1em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuentesecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+main section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: var(--colorprincipal);
+    text-align: center;
+}
+
+main section .underline hr {
+    position: absolute;
+    width: 100%;
+    border-color: var(--colorprincipal);
+    top: -1px;
+}
+
+main section .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section .flex article {
+    width: 100%;
+    padding: 2em 0;
+    border-bottom: 1px solid #aaa;
+}
+
+main section .flex article h3 {
+    font-weight: 700;
+    margin: 0.5em 0em;
+}
+
+main section p {
+    color: #777;
+    line-height: 1.10em;
+    margin-bottom: 0.5em;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+main section .flex article div i {
+    border: 1px solid var(--colorprincipal);
+    color: var(--colorprincipal);
+    font-size: 150%;
+    padding: 0.5em;
+}
+
+/* fin de ourservices */
+
+/* inicio de aboutus */
+
+main section h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main section h4 {
+    color: var(--colorprincipal);
+    margin: var(--margingrid) 0;
+}
+
+main #aboutus figure {
+    width: 90%;
+    margin: 2em auto;
+}
+
+main #aboutus figure .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main #aboutus figure .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
+    transform: rotateZ(0deg);
+}
+
+/* fin de aboutus */
+
+/* media de 600px */
+
+@media(min-width: 37.500em) {
+    main section .flex article {
+        width: calc(50% - (2*var(--margingrid)));
+        padding: 0em var(--margingrid);
+        border-left: 1px solid #aaa;
+        border-bottom: 0;
+        margin: var(--margingrid);
+    }
+    main section .flex article:last-child {
+        width: 100%;
+    }
+    main #aboutus .columna {
+        width: 50%;
+        padding: 1.5em;
+    }
+    main #aboutus figure {
+        width: 100%;
+        margin: 0em;
+    }
+}
+
+/* media de 768px */
+
+@media(min-width: 48em) {
+    header .nav-top a span {
+        display: inline;
+    }
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+    main section .flex article, main section .flex article:last-child {
+        width: calc(33.333% - (2*var(--margingrid)));
+    }
+    footer {
+        text-align: left;
+    }
+}
+
+/* media de 1004px */
+
+@media(min-width: 62.750em) {
+    header nav .hamburguesa {
+        display: none;
+    }
+    header nav .menu {
+        float: right;
+        padding-top: 0;
+        clear: none;
+    }
+    header nav .menu li {
+        display: inline-block;
+    }
+    header nav .menu a {
+        border: 0px;
+        padding: 0.4em 1.25em;
+    }
+}
